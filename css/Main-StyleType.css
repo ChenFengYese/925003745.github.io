@@ -1,0 +1,41 @@
+div{
+    /*垂直居中 */
+    vertical-align: middle;
+    /*水平居中*/
+    text-align: center;
+    z-index: 2;
+}
+body{
+    margin: 0;
+}
+.topic-1{
+    width: auto;
+    height: calc(9vh);
+    background-color: #eeeeee;
+    mso-cellspacing: 0;
+}
+.pic-5{
+    width: calc(5vh) !important;
+}
+.pic-10{
+    width: calc(10vh) !important;
+}
+.left-5{
+    position: absolute;
+    left: calc(3.5vh);
+    top: calc(2.6vh)
+}
+.right-5{
+    position: absolute;
+    right: calc(3.5vh);
+    top: calc(2.6vh)
+}
+.text-secondary {
+    color: #f93 !important;
+}
+.font-size50{
+    font-size: 50px;
+}
+.bg-light {
+    background-color: #c6dbed !important
+}
