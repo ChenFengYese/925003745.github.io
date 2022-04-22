@@ -569,7 +569,9 @@ progress {
     padding-right: var(--bs-gutter-x, .75rem);
     padding-left: var(--bs-gutter-x, .75rem);
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    margin-bottom: 0;
+
 }
 
 @media (min-width: 576px) {
@@ -607,7 +609,8 @@ progress {
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
+    /*margin-top: calc(var(--bs-gutter-y) * -1);*/
+    margin-top: 50px;
     margin-right: calc(var(--bs-gutter-x) / -2);
     margin-left: calc(var(--bs-gutter-x) / -2)
 }
@@ -2858,8 +2861,8 @@ textarea.form-control-lg {
 
 .btn-primary {
     color: #000;
-    background-color: #34AD54;
-    border-color: #34AD54;
+    background-color: #008bec;
+    border-color: #008bec;
 }
 
 .btn-primary:hover {
