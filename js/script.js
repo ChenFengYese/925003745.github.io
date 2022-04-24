@@ -43,7 +43,9 @@ document
       weather.search();
     }
   });
-const cityName_ = ipAddress();
-weather.fetchWeather(cityName_);
+const _cityName_ = ipAddress();
+__cityName__ = "当前IP地址所对应城市：" + _cityName_ + "\n" + "(该IP定位服务由高德地图提供，可能不准确，仅供参考)";
+alert(__cityName__);
+weather.fetchWeather(_cityName_);
 
 
