@@ -9,15 +9,61 @@
     <link rel="icon" href="./pic/weather-icon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;
+        0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/weather-style.css" />
+    <link rel="stylesheet" href="css/line-animation.css">
+    <link rel="stylesheet" href="css/weather-bg-animation.css">
     <script src="js/ip-address.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 
-<body onload="myFunction()">
-    <div id="loading"></div>
+<body>
+
+<!-- -------------------------------------------------------------------->
+<div class="sea">
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+<!--<div id="plane">-->
+<!--    <i class="fa fa-paper-plane" aria-hidden="true"></i>-->
+<!--</div>-->
+<!--<script>-->
+<!--    let plane=document.getElementById('plane');-->
+<!--    let deg=0,ex=0,ey=0,vx=0,vy=0,count=0;-->
+<!--    window.addEventListener('mousemove',(e)=>{-->
+<!--        ex=e.x-plane.offsetLeft-plane.clientWidth/2;-->
+<!--        ey=e.y-plane.offsetTop-plane.clientHeight/2;-->
+<!--        deg=360*Math.atan(ey/ex)/(2*Math.PI)+45;-->
+<!--        if(ex<0){-->
+<!--            deg+=180;-->
+<!--        }-->
+<!--        count=0;-->
+<!--    })-->
+<!--    function draw(){-->
+<!--        plane.style.transform='rotate('+deg+'deg)';-->
+<!--        if(count<100){-->
+<!--            vx+=ex/100;-->
+<!--            vy+=ey/100;-->
+<!--        }-->
+<!--        plane.style.left=vx+'px';-->
+<!--        plane.style.top=vy+'px';-->
+<!--        count++;-->
+<!--    }-->
+<!--    setInterval(draw, 1);-->
+<!--</script>-->
+<!-- ------------------------------------------------------------->
+
+
+    <div class="demo1 topic-1">
+        <span><img class="pic-5 left-5" src="pic/face1.png" alt="image"></span>
+        <span class="text-secondary-2 font-size50"><strong>TrumpeT's</strong></span>
+        <span><img class="pic-5 right-5" src="pic/face2.png" alt="image"> </span>
+    </div>
+
+    <div class="position-1">
+<!--    <div id="loading"></div>-->
     <div class="cont">
         <div class="one">
             <h1>🌦️ Weather ☔️</h1>
@@ -43,8 +89,8 @@
             </div>
             <div class="weather loading">
 				<div class="other">注意：请输入城市名拼音，首字母大写</div>
-                <h2 class="city">Weather in Shanghai</h2>
-                <h1 class="temp">21°C</h1>
+                <h2 class="city">Weather in Harbin</h2>
+                <h1 class="temp">11°C</h1>
                 <div class="flex">
                     <img src="https://openweathermap.org/img/wn/04d.png" alt="" class="icon" />
                     <div class="description">多云</div>
@@ -57,9 +103,25 @@
         </div>
     </div>
 
+    <div class="container-fluid color-orange text-white py-4">  <!-- 底部版权声明div -->
+        <div class="container text-center">
+            <p class="mb-0">
+            <span _mstmutation="1" _msthash="442650" _msttexthash="132708056">
+                版权所有 © 2022.TRUMPET 保留所有权利。
+                <a target="_blank" href="https://github.com/925003745?tab=repositories"
+                   _mstmutation="1" _istranslated="1">
+                    Trumpet's
+                </a>
+            </span>
+            </p>
+        </div>
+    </div>
+    </div>
+
 
     <script>
-        var preloader = document.getElementById('loading');
+        const preloader = document.getElementById('loading');
+
         function myFunction() {
             preloader.style.display = 'none';
         }

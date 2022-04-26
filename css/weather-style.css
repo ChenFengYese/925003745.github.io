@@ -21,7 +21,7 @@ body {
   width: 100%;
   height: 100vh;
   background: #fff url("loading.svg") no-repeat center;
-  z-index: 99999;
+  z-index: 3;
 }
 
 .cont {
@@ -235,3 +235,112 @@ a{
   width: 15em;
   opacity: 0.9;
 }
+
+/*++++++++++++++++++++++++++++++*/
+
+
+.text-white {
+  color: #fab22f !important;
+}
+.color-orange {
+  background-color: #eeeeee;
+  opacity: 0.6;
+  bottom: 0;
+!important: ;
+}
+.text-center {
+  text-align: center !important
+}
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px
+  }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: 1320px
+  }
+}
+.mb-0 {
+  margin-bottom: 0 !important
+}
+.py-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important
+}
+.demo1 {
+  position: fixed;
+  top: 0;
+  /*top: 0;*/
+  /*left:0;*/
+  /*bottom:0;*/
+  /*width:100%;*/
+  /*!*height: 50px;*!*/
+  /*background-color: #eeeeee;*/
+  /*z-index:999;*/
+  width: 100%;
+  height: calc(9vh);
+  /*background-color: #eeeeee;*/
+  mso-cellspacing: 0;
+  z-index: 3;
+
+}
+.topic-1{
+
+  height: calc(9vh);
+  /*background-color: #eeeeee;*/
+  mso-cellspacing: 0;
+  opacity: 0.85;
+  z-index: 3;
+}
+.pic-5{
+  width: calc(5vh) !important;
+}
+.left-5{
+  position: absolute;
+  left: calc(3.5vh);
+  top: calc(2.6vh)
+}
+.text-secondary-2 {
+  color: #f93 !important;
+  z-index: 3;
+}
+.font-size50{
+  font-size: calc(5vh);
+  z-index: 3;
+}
+.right-5{
+  position: absolute;
+  right: calc(3.5vh);
+  top: calc(2.6vh)
+}
+div{
+  /*垂直居中 */
+  vertical-align: middle;
+  /*水平居中*/
+  text-align: center;
+  z-index: 2;
+}
+.position-1{
+  margin-top: calc(8vh);
+}
+

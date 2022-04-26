@@ -69,7 +69,7 @@ body{
 .weather-style{
     width: 100%;
 }
-.tianqi{
+.font-18-bold{
     font-size: 18px;
     font-weight: bold;
 }
@@ -80,4 +80,15 @@ body{
 .span-weather-center{
     vertical-align: middle;
     text-align: center;
+}
+.section-headline {
+    width: 420px;
+    margin-bottom: 45px;
+}
+.typography-headline {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
