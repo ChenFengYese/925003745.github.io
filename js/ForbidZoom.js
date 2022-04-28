@@ -15,3 +15,24 @@ document.addEventListener('keydown', function (event) {
         event.preventDefault();
     }
 }, false);
+
+window.onload = function () {
+    document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+    });
+    //以上是禁止双指缩放
+    //以下是禁止双击缩放
+    document.addEventListener('touchstart', function (e) {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    });
+    var endTouch = 0;
+    document.addEventListener('touchend', function (e) {
+        var nowTouch = (new Date()).getTime();
+        if (nowTouch - endTouch<= 300) {
+            e.preventDefault();
+        }
+        endTouch = nowTouch ;
+    }, false);
+};
