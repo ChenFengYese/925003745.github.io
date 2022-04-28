@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./pic/face4.png">   <!--icon-->
+    <script src="js/ForbidZoom.js"></script>
+    <title>TrumpeT's WeChat</title>
+
+    <style>
+        .wechat-id-bg{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .wechat-id-bg::before{
+            content: "";
+            position: absolute;
+            bottom:0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+        }
+        span{
+            position: absolute;
+            align-content: center;
+            z-index: 999;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wechat-id-bg">
+    <span>
+        <img src="pic/Wechat-ID.png" alt="image" style="transform: scale(35%)">
+    </span>
+</div>
+
+</body>
+</html>
