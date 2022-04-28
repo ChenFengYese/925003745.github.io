@@ -28,7 +28,11 @@ let weather = {
 
   },
   search: function () {
-    this.fetchWeather(document.querySelector(".search-bar").value);
+    let CityNameByPinYin = getFullChars(document.querySelector(".search-bar").value);
+    if (CityNameByPinYin === "HaErBin"){
+      CityNameByPinYin = "Harbin";
+    }
+    this.fetchWeather(CityNameByPinYin);
   },
 };
 

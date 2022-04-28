@@ -22,7 +22,6 @@ body{
     bottom: 0;
 }
 .wave{
-    /* 这里的背景用的是svg文件，这个文件我事先在PS里做好并导出 */
     background: url("../svg/wave.svg") repeat-x;
     width: 6400px;
     height: 198px;

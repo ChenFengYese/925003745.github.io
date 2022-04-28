@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/weather-style.css" />
+    <link rel="stylesheet" href="css/weather-bg-animation.css">
     <link rel="icon" href="./pic/face4.png">   <!--icon-->
     <script src="js/ForbidZoom.js"></script>
     <title>TrumpeT's WeChat</title>
@@ -15,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+            background: linear-gradient(to bottom, lightskyblue, lightpink, lightsalmon);
             margin:0;
             padding:0;
             box-sizing: border-box;
@@ -30,7 +35,7 @@
             border-top: 1px solid rgba(255,255,255,0.5);
             backdrop-filter: blur(5px);
         }
-        span{
+        .span_{
             position: absolute;
             align-content: center;
             z-index: 999;
@@ -43,11 +48,39 @@
 </head>
 <body>
 
+<div class="demo1 topic-1">
+    <span><img class="pic-5 left-5" src="pic/face1.png" alt="image"></span>
+    <span class="text-secondary-2 font-size50"><strong>TrumpeT's</strong></span>
+    <span><img class="pic-5 right-5" src="pic/face2.png" alt="image"> </span>
+</div>
+
 <div class="wechat-id-bg">
-    <span>
-        <img src="pic/Wechat-ID.png" alt="image" style="transform: scale(35%)">
+    <span class="span_">
+        <img class="box_2" src="pic/Wechat-ID.png" alt="image">
     </span>
 </div>
 
 </body>
+<style>
+
+    /*手机*/
+    @media screen and (max-width:600px){
+        .box_2 {
+            transform: scale(25%)
+        }
+    }
+    /*平板*/
+    @media screen and (min-width:600px) and (max-width:960px){
+        .box_2 {
+            transform: scale(33%)
+        }
+    }
+    /*PC*/
+    @media screen and (min-width:960px){
+        .box_2 {
+            transform: scale(40%)
+        }
+    }
+
+</style>
 </html>
