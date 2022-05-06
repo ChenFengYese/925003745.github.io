@@ -16,9 +16,47 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/ForbidZoom.js"></script>
+    <script src="./js/http_kit.fontawesome.com_697cd61f5e.js" crossorigin="anonymous"></script> <!-- 图形库 -->
+
+    <script type="text/javascript">
+        function fnLoading(){
+            var __loading__ = document.getElementById("__main__");
+            __loading__.style.display = 'none';
+        }
+        document.onreadystatechange = subSomething;
+        function subSomething(){
+            if(document.readyState === "complete"){
+                document.getElementById("__main__").style.display = 'inline';
+                document.getElementById("loadEnd").style.display = 'none';
+                document.getElementById("loadEnd").setProperty("background-color", "#fff");
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/OpenAnimation.css">
+
 </head>
 <body>
-<script src="./js/http_kit.fontawesome.com_697cd61f5e.js" crossorigin="anonymous"></script> <!-- 图形库 -->
+
+
+<div class="loader" id="loadEnd">
+    <span>L</span>
+    <span>O</span>
+    <span>A</span>
+    <span>D</span>
+    <span>I</span>
+    <span>N</span>
+    <span>G</span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<div id="__main__">
+    <script type="text/javascript">
+        fnLoading()
+    </script>
 <div>
     <script src="js/line-animation.js"></script>  <!-- background方块动画 -->
     <canvas id="canvas"></canvas>   <!-- background方块动画 -->
@@ -61,6 +99,7 @@
                     <a class="mb-0 scriptText" href="index-weather.html">
                         忽如一夜春风来，千树万树梨花开，明日冷暖问谁知，唯有快快点进来 >
                     </a>
+<!--                    <button onclick="fnLoading()">第一种方式</button>-->
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -131,7 +170,6 @@
 </div>
 
 </div>
-
-
+</div>
 </body>
 </html>

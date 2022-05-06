@@ -7,6 +7,12 @@ div{
 }
 body{
     margin: 0;
+    /*height: initial; */
+    /*!* 弹性布局 水平+垂直居中 *!*/
+    /*display: initial;*/
+    /*justify-content: initial;*/
+    /*align-items: initial;*/
+    /*background-color: initial;*/
 }
 .topic-1{
     width: auto;
