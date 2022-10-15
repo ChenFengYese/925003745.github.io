@@ -1,0 +1,100 @@
+div{
+    /*垂直居中 */
+    vertical-align: middle;
+    /*水平居中*/
+    text-align: center;
+    z-index: 2;
+}
+body{
+    margin: 0;
+    /*height: initial; */
+    /*!* 弹性布局 水平+垂直居中 *!*/
+    /*display: initial;*/
+    /*justify-content: initial;*/
+    /*align-items: initial;*/
+    /*background-color: initial;*/
+}
+.topic-1{
+    width: auto;
+    height: calc(9vh);
+    background-color: #eeeeee;
+    mso-cellspacing: 0;
+    opacity: 0.85;
+    z-index: 3;
+}
+.pic-5{
+    width: calc(5vh) !important;
+}
+.pic-10{
+    width: calc(10vh) !important;
+}
+.left-5{
+    position: absolute;
+    left: calc(3.5vh);
+    top: calc(2.6vh)
+}
+.right-5{
+    position: absolute;
+    right: calc(3.5vh);
+    top: calc(2.6vh)
+}
+.text-secondary-2 {
+    color: #f93 !important;
+    z-index: 3;
+}
+.font-size50{
+    font-size: calc(5vh);
+    z-index: 3;
+}
+.bg-light {
+    background-color: #c6dbed !important
+}
+.demo {
+    margin-top: 100px;
+}
+.demo1 {
+    position: fixed;
+    /*top: 0;*/
+    /*left:0;*/
+    /*bottom:0;*/
+    /*width:100%;*/
+    /*!*height: 50px;*!*/
+    /*background-color: #eeeeee;*/
+    /*z-index:999;*/
+    width: 100%;
+    height: calc(9vh);
+    background-color: #eeeeee;
+    mso-cellspacing: 0;
+    z-index: 3;
+}
+.color-orange{
+    background-color: #fab22f;
+    opacity: 0.6;
+    bottom: 0; !important;
+}
+.weather-style{
+    width: 100%;
+}
+.font-18-bold{
+    font-size: 18px;
+    font-weight: bold;
+}
+.scriptText{
+    font-size: 13px;
+    color: #ff8041;
+}
+.span-weather-center{
+    vertical-align: middle;
+    text-align: center;
+}
+.section-headline {
+    width: 420px;
+    margin-bottom: 45px;
+}
+.typography-headline {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}

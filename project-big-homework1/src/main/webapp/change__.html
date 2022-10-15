@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="CN">
+<head>
+    <meta charset="UTF-8">
+    <title>设定起点、目的地和城市</title>
+
+    <style>
+        .div-center-1{
+            width: 800px;
+            height: 450px;
+
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin:-225px 0 0 -400px;
+        }
+        span{
+            display:block;
+            height: 50px;
+        }
+        .body-{
+            /*position: fixed;*/
+            /*width: 100%;*/
+            /*height: 100vh;*/
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            /*background: linear-gradient(to bottom, lightskyblue, lightpink, lightsalmon);*/
+            /*margin:0;*/
+            /*padding:0;*/
+            /*box-sizing: border-box;*/
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="body-">
+<div class="div-center-1">
+    <form class="form" id="from__">
+        <span>
+            <center>
+                <label for="start">&nbsp;&nbsp;&nbsp;起点&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="start" autocomplete="off" name="__start">
+            </center>
+        </span>
+        <span>
+            <center>
+                <label for="end">&nbsp;&nbsp;&nbsp;终点&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="end" name="__end">
+            </center>
+        </span>
+        <span>
+            <center>
+                <label for="start_city">起点城市</label>
+                <input type="text" id="start_city" autocomplete="off" name="__start_city">
+            </center>
+        </span>
+        <span>
+            <center>
+                <label for="end_city">终点城市</label>
+                <input type="text" id="end_city" name="__end_city">
+            </center>
+        </span>
+        <center>
+        <button type="button" onclick="change___()">提交</button>
+        </center>
+    </form>
+</div>
+</div>
+</body>
+
+<script>
+    function change___(){
+        const _ = document.getElementById('start').value;
+        const __ = document.getElementById('end').value;
+        const ___ = document.getElementById('start_city').value;
+        const ____ = document.getElementById('end_city').value;
+        window.location.href = 'http://localhost:8080/demo_war/map.html?'
+            + encodeURI(_) + '&' + encodeURI(__) + '&' + encodeURI(___) + '&' + encodeURI(____);
+    }
+</script>
+
+</html>
