@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>地点关键字 + 驾车路线规划</title>
+    <style type="text/css">
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <style type="text/css">
+        #panel {
+            position: fixed;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+        }
+
+        #panel .amap-call {
+            background-color: #009cf9;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        #panel .amap-lib-driving {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'f5ee6cb7c850a1219b274135cbc699f0',
+        }
+    </script>
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=2.0&key=d41a5d70ceb946e585894ff8ba80799e&plugin=AMap.Driving"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Main-StyleType.css">
+    <link rel="icon" href="pic/face4.png">   <!--icon-->
+    <link rel="stylesheet" href="css/line-animation.css">
+    <link href="css/css2.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/OpenAnimation.css">
+
+    <style>
+        .text-5-1{
+            width: calc(15vh) !important;
+            font-size: 14px;
+        }
+        .right-5-1{
+            position: absolute;
+            right: calc(15vh);
+            top: calc(1.9vh);
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="demo1 topic-1">
+        <span><img class="pic-5 left-5" src="pic/face1.png" alt="image"></span>
+        <span class="text-secondary-2 font-size50"><strong>TrumpeT's</strong></span>
+        <span>
+            <a type="button" class="text-5-1 right-5-1" onclick="change__()">点此更换<br>起点终点</a>
+        </span>
+        <span>
+            <img class="pic-5 right-5" src="pic/face2.png" alt="image">
+        </span>
+        <div id="panel" style="margin-top: calc(9vh)"></div>
+    </div>
+
+<!-- 地图显示 -->
+    <div id="container"></div>
+
+
+<!-- 导航内容显示 -->
+
+
+
+<script type="text/javascript">
+
+    var start__ = '太原武宿国际机场';
+    var end__ = '太原南站';
+    var city__s = '太原';
+    var city__e = '太原';
+
+    function change__(){
+        window.location.href = "change__.html";
+    }
+    // const localInfo = location.search;
+    // console.log(localInfo);
+    // console.log("++++");
+    // console.log(location.search);
+
+    if (location.search !== ''){
+        const localInfo = decodeURI(location.search);
+        start__ = localInfo.split('&')[0].split('?')[1];
+        end__ = localInfo.split("&")[1];
+        city__s = localInfo.split("&")[2];
+        city__e = localInfo.split("&")[3];
+        // console.log(start__);
+        // console.log(end__);
+        // console.log(city__s);
+        // console.log(city__e);
+    }
+
+    const map = new AMap.Map("container", {
+        resizeEnable: true,
+        center: [116.397428, 39.90923],//地图中心点
+        zoom: 9
+    });
+
+    const driving = new AMap.Driving({
+        map: map,
+        panel: "panel"
+    });
+
+    driving.search([
+        {keyword: start__, city: city__s},//路线规划起始地
+        {keyword: end__, city: city__e}//路线规划终点
+    ], function (status, result) {
+        if (status === 'complete') {
+            log.success('绘制驾车路线完成')
+        } else {
+            log.error('获取驾车数据失败：' + result)
+        }
+    });
+</script>
+S
+</bSdy>
+</html>
