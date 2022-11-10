@@ -91,10 +91,19 @@
 			<script src="js/EasePack.min.js"></script>
 			<script src="js/rAF.js"></script>
 			<script src="js/demo-1.js"></script>
-
-<script src='js/Rx.min.js'></script>
-<script src='js/rxcss.min.js'></script>
-<script src="js/index.js"></script>
+			<script src='js/Rx.min.js'></script>
+			<script src='js/rxcss.min.js'></script>
+			<script src="js/index.js"></script>
+		<script>
+			window.addEventListener("message",
+			    function (event) {
+				if (event.origin === window.location.origin) {
+				    console.log(event.data)
+				    document.getElementById("time").style.left = "140px"
+				}
+			    }, false
+			);
+		</script>
 
 		</body>
 	</html>
